@@ -15,9 +15,7 @@ public class Field {
             for (int j = 0; j < SIZE_MATRIX; j++) {
                 matrix[i][j] = NOT_NULL;
             }
-
         }
-
     }
 
     public void showMatrix() {
@@ -28,7 +26,6 @@ public class Field {
         for (int i = 0; i < SIZE_MATRIX; i++) {
             System.out.print((i + 1) + " ");
             for (int j = 0; j < SIZE_MATRIX; j++) {
-
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
@@ -102,8 +99,9 @@ public class Field {
 
     public void compMove() {
         int x, y;
+        System.out.println("Ход компьютера: ");
         do {
-            System.out.println("Ход компьютера: ");
+
             x = (int) (Math.random() * SIZE_MATRIX);
             y = (int) (Math.random() * SIZE_MATRIX);
         } while (!checkValid(x, y));
